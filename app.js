@@ -11,6 +11,13 @@ const productApi=require('./api/routes/products');
 const cors=require('cors');
 app.use(express.json());
 const client=require('./dbconnection');
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Credentials', false);
+    next();
+  });
 app.get('/',(req,res)=>{
     res.status(200).send({status:'ok'})
 })
