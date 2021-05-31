@@ -10,6 +10,9 @@ const productApi=require('./api/routes/products');
 const cors=require('cors');
 app.use(express.json());
 const client=require('./dbconnection');
+app.get('/',(req,res)=>{
+    res.status(200).send({status:'ok'})
+})
 app.use('/api/auth-token-create',authRoute);
 app.use('/api/app-pg-db-create',pgTableCreate);
 app.use('/api/api-access-token-create',apiAccessTokens)
