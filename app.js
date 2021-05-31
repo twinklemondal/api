@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const authRoute=require('./api/routes/auth');
@@ -20,6 +21,6 @@ app.use('/api/user',userApiAccess);
 app.use('/api/products',productApi)
 app.use('/api/products/:id',productApi)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.listen(5000,function(){
+app.listen(process.env.PORT,function(){
     console.log("server is runnning");
 })
