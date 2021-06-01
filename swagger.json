@@ -102,7 +102,7 @@
     },
    "/contracts": {
       "get": {
-        "summary": "Get All Products",
+        "summary": "Get All Contracts",
         "description": "returns the product list",
         "operationId": "getProducts",
         "produces": [
