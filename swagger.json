@@ -60,7 +60,7 @@
         }
       }
     },
-    "/products/add": {
+    "/contracts/add": {
       "post": {
         "description": "Add Product",
         "operationId": "addproduct",
@@ -100,7 +100,7 @@
         }
       }
     },
-   "/products": {
+   "/contracts": {
       "get": {
         "summary": "Get All Products",
         "description": "returns the product list",
@@ -131,7 +131,7 @@
         ]
       }
     },
-    "/products/delete": {
+    "/contracts/delete": {
       "post": {
         "description": "delete Product",
         "operationId": "delete product",
