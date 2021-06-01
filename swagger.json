@@ -29,7 +29,7 @@
     "/auth-token-create": {
       "post": {
         "description": "Creates A new Token For Api Access",
-        "operationId": "gettoken",
+        "operationId": "CreateToken",
         "produces": [
           "application/json"
         ],
@@ -40,15 +40,15 @@
             "description": "Create Token For Api Access",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/NewPet"
+              "$ref": "#/definitions/CreateToken"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "pet response",
+            "description": "contracts response",
             "schema": {
-              "$ref": "#/definitions/Pet"
+              "$ref": "#/definitions/CreateToken"
             }
           },
           "default": {
@@ -62,19 +62,19 @@
     },
     "/contracts/add": {
       "post": {
-        "description": "Add Product",
-        "operationId": "addproduct",
+        "description": "Add Contract",
+        "operationId": "addContract",
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
-            "name": "addproduct",
+            "name": "addContract",
             "in": "body",
-            "description": "create a product",
+            "description": "create a Contract",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/addnewproduct"
+              "$ref": "#/definitions/addContract"
             }
           },
           {
@@ -86,9 +86,9 @@
         ],
         "responses": {
           "200": {
-            "description": "Add Product Response",
+            "description": "Add Contracts Response",
             "schema": {
-              "$ref": "#/definitions/addnewproduct"
+              "$ref": "#/definitions/addContract"
             }
           },
           "default": {
@@ -102,9 +102,9 @@
     },
    "/contracts": {
       "get": {
-        "summary": "Get All Contracts",
-        "description": "returns the product list",
-        "operationId": "getProducts",
+        "summary": "Get All contracts",
+        "description": "returns the contracts list",
+        "operationId": "getContracts",
         "produces": [
           "application/json"
         ],
@@ -118,7 +118,7 @@
         ],
         "responses": {
           "200": {
-            "description": "get products",
+            "description": "get contracts",
             "schema": {
               "type": "object"
             }
@@ -133,19 +133,19 @@
     },
     "/contracts/delete": {
       "post": {
-        "description": "delete Product",
-        "operationId": "delete product",
+        "description": "delete Contracts",
+        "operationId": "delete Contracts",
         "produces": [
           "application/json"
         ],
         "parameters": [
           {
-            "name": "deleteproduct",
+            "name": "deleteContracts",
             "in": "body",
-            "description": "delete a product",
+            "description": "delete a Contracts",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/deleteproducts"
+              "$ref": "#/definitions/deleteContracts"
             }
           },
           {
@@ -157,9 +157,9 @@
         ],
         "responses": {
           "200": {
-            "description": "Delete Product Response",
+            "description": "Delete Contracts Response",
             "schema": {
-              "$ref": "#/definitions/deleteproduct"
+              "$ref": "#/definitions/deleteContracts"
             }
           },
           "default": {
@@ -188,7 +188,7 @@
         }
       }
     },
-    "AddProduct": {
+    "addContract": {
       "type": "object",
       "required": [
         "name"
@@ -203,7 +203,7 @@
       }
     },
 
-    "DeleteProduct": {
+    "deleteContracts": {
       "type": "object",
       "required": [
         "productId"
