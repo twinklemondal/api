@@ -15,8 +15,8 @@
   "host": "swagger-app-node.herokuapp.com",
   "basePath": "/api",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
 
   ],
   "consumes": [
