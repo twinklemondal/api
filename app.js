@@ -25,8 +25,8 @@ app.use('/api/auth-token-create',authRoute);
 app.use('/api/app-pg-db-create',pgTableCreate);
 app.use('/api/api-access-token-create',apiAccessTokens)
 app.use('/api/user',userApiAccess);
-app.use('/api/products',productApi)
-app.use('/api/products/:id',productApi)
+app.use('/api/contracts',productApi)
+app.use('/api/contracts/:id',productApi)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.listen(process.env.PORT,function(){
     console.log("server is runnning");
